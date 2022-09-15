@@ -1,6 +1,6 @@
 //Desestructuracion de funciones
 
-interface Producto{
+export interface Producto{
     desc:string;
     precio:number;
 }
@@ -24,7 +24,7 @@ const articulos1=[telefono,tablet];
 const totIva=calcularIva(articulos1);
 console.log('totIva:',totIva);
 
-function calcularIVA(productos:Producto[]):[number, number]{
+export function calcularIVA(productos:Producto[]):[number, number]{
     let total=0;
     productos.forEach(({precio})=>{
         total+=precio;
