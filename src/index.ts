@@ -1,17 +1,20 @@
+class Formula{
+private resultado:number;    
+private a:number=3;
+private b:number=5;
+private c: number=7;
 
-//Exportar e Importar
-import {calcularIVA, Producto} from './repaso/05-desestructurar-funciones'
-
-const carrito:Producto[]=[
-{
-    desc:'Telefono1',
-    precio:1270
-},
-{
-    desc:'Telefono2',
-    precio:1270
+public formula(){
+    this.calcular();
 }
-];
-const[total,iva]=calcularIVA(carrito);
-console.log('Total:',total);
-console.log('Total + IVA:', iva);
+private calcular(){
+    this.resultado= -this.b + Math.sqrt(this.b * this.b - 4 * this.a * this.c) / (2 * this.a);
+}
+public mostrar(){
+    console.log(`El resultado es: ${this.resultado}`);
+}
+}
+let formula1=new Formula();
+formula1.formula();
+formula1.mostrar();
+
