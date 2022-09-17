@@ -1,25 +1,27 @@
-class Formula{
- 
-private a:number=4;
-private b:number=3;
-private c: number=-1;
-private resultadox1:number;   
-private resultadox2:number;
+class tabla{
+    private numero:number;
+    tem:number;
 
-
-public formula(){
-    this.calcular();
+    setNumero(a:number){
+        this.numero=a;
+    }
+    getNumero():number{
+        return this.numero;
+    }
+    calcular():void{
+        for(let i=1; i<11; ++i){
+            console.log(`${this.numero} x ${i} = ${i*this.numero}`)
+        }
+        let s:number=1;
+        while(s<11){
+            console.log(`${this.numero} x ${s} = ${s*this.numero}`)
+            ++s;
+        }
+    }
 }
-private calcular(){
-    this.resultadox1= -this.b - Math.sqrt((this.b * this.b) - 4 * this.a * this.c) / (2 * this.a);
-    this.resultadox2= -this.b + Math.sqrt((this.b * this.b) - 4 * this.a * this.c) / (2 * this.a);
-}
-public mostrar(){
-    console.log(`El resultado de x1 es: ${this.resultadox1}`);
-    console.log(`El resultado de x2 es: ${this.resultadox2}`);
-}
-}
-let formula1=new Formula();
-formula1.formula();
-formula1.mostrar();
-
+let tabla1 = new tabla();
+tabla1.setNumero(7);
+console.log('variable privada: ' + tabla1.getNumero());
+tabla1.tem=6;
+console.log('variable publica: ' + tabla1.tem);
+tabla1.calcular();
