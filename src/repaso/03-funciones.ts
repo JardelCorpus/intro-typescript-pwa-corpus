@@ -44,4 +44,4 @@ const nuevoAlumno:escuelaAlumno={
         console.log('Hola Mundo!!!');
     },
 }
-console.table(alumnoUTL);
+console.table(nuevoAlumno);

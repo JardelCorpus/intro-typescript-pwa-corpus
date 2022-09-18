@@ -1,6 +1,6 @@
 
 //Exportar e Importar
-import {calcularIVA, Producto} from './repaso/05-desestructurar-funciones'
+import {calcularIVA, Producto} from './05-desestructurar-funciones'
 
 const carrito:Producto[]=[
 {
